@@ -1,8 +1,110 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Hero from "../components/Hero";
 ---
 
-<Layout>
-  <Hero />
+<Layout
+  title="Catapulta"
+  titleHero="Titulo inicial"
+  img="img/heroimg-6.jpg"
+  active="Home"
+>
+  <section class="w-full h-screen flex justify-center items-center gap-44">
+    <div class="w-[calc(100vw/3)] flex gap-6 flex-col">
+      <h3 class="text-white uppercase font-bold text-3xl">Sobre Nosotros</h3>
+      <p class="text-white">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita illo
+        pariatur alias a cumque. Hic fugiat, quos cumque quas velit eius
+        eligendi impedit odit quasi veritatis, voluptatum quibusdam, inventore
+        cupiditate! Vitae, velit. Consequuntur provident voluptatibus architecto
+        odit doloribus voluptatem alias cum, dolorum molestiae ipsam, vitae
+        saepe, soluta esse sit. Eligendi ducimus maiores nemo sunt corporis
+        tempore accusantium! Fugiat, id veritatis. Doloremque repellendus magnam
+        consequuntur quo nisi impedit vel enim similique maiores dolor vero,
+        optio nesciunt repellat voluptate tempore in debitis consequatur.
+        Repellendus similique id laudantium, sint aperiam inventore nostrum
+      </p>
+    </div>
+    <div>
+      <img
+        class="object-cover w-[500px] h-[500px] rounded-[100%]"
+        src="/img/heroimg-3.jpeg"
+      />
+    </div>
+  </section>
+  <section
+    class="bg-[url(/img/sect-2.jpeg)] w-full h-screen bg-cover relative flex justify-center items-center gap-44 blackbg"
+  >
+    <div class="w-[calc(100vw/3)] flex flex-col gap-4 z-20">
+      <h3 class="text-[#E76889] font-bold text-4xl uppercase">
+        Salidas Estudiantiles
+      </h3>
+      <p class="text-white bg-[#CFC6EC30] p-9 rounded-4xl backdrop-blur-2xl">
+        Hoy en día, los jóvenes cuentan con múltiples oportunidades para
+        formarse en áreas clave del desarrollo tecnológico e industrial. Los
+        estudios tecnológicos ofrecen una alternativa práctica, moderna y de
+        alta demanda laboral para quienes desean adquirir habilidades
+        específicas en corto tiempo
+      </p>
+    </div>
+    <div
+      class="flex flex-col gap-4 bg-[#CFC6EC30] justify-center items-center p-4 rounded-2xl backdrop-blur-2xl z-20"
+    >
+      <p class="w-2xl text-white">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio
+        inventore vitae illum cumque maxime est totam, perferendis eveniet dolor
+        a suscipit ipsum necessitatibus molestias odit aperiam praesentium
+        adipisci nisi ab!
+      </p>
+      <img
+        class="w-[500px] h-[500px] object-cover rounded-[100%]"
+        src="/img/heroimg-6.jpg"
+        alt=""
+      />
+      <a
+        class="bg-[#F09C08] uppercase font-bold text-3xl p-5 rounded-full cursor-pointer"
+        href="/Salidas Estudiantiles">Más</a
+      >
+    </div>
+  </section>
+  <section class="w-full h-screen flex justify-center items-center gap-[100px]">
+    <div class="text-white flex flex-col gap-5 w-[calc((100vw/3)-100px)]">
+      <h3 class="text-4xl uppercase font-bold text-[#E76889]">Tests</h3>
+      <p>
+        Elegir una carrera profesional puede ser una decisión difícil para
+        muchos jóvenes. Los test de orientación vocacional son herramientas
+        clave que ayudan a identificar intereses, habilidades y fortalezas
+        personales, facilitando una elección más consciente y acertada.
+      </p>
+    </div>
+    <div
+      class="text-white flex flex-col gap-5 w-[calc((100vw/3)-100px)] justify-center items-center rounded-3xl border-b-4 pb-7 pt-7 border-t-4"
+    >
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint, eum? Rem
+        nobis perferendis debitis at! Aut ipsum explicabo, at delectus nisi
+        repudiandae ex architecto enim ea quod consectetur aliquam adipisci.
+      </p>
+      <img
+        class="w-[500px] h-[500px] rounded-full"
+        src="/img/heroimg-4.jpeg"
+        alt=""
+      />
+    </div>
+  </section>
 </Layout>
+
+<style>
+  .blackbg {
+    position: relative;
+  }
+
+  .blackbg::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #00000065;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+</style>

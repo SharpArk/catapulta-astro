@@ -1,0 +1,103 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  title="Catapulta - Sobre Nosotros"
+  active="About"
+  titleHero="Sobre Nosotros"
+  img="img/about.jpeg"
+>
+  <section
+    class="text-white flex justify-center items-center w-full h-screen gap-6 blackbg bg-[url(/img/About3.jpeg)] bg-cover"
+  >
+    <div class="flex flex-col gap-4 justify-center items-center z-20">
+      <h3 class="uppercase text-3xl font-bold">Sobre Nosotros</h3>
+      <img
+        class="w-[500px] h-[500px] rounded-full object-cover"
+        src="/img/about2.jpeg"
+      />
+    </div>
+    <p
+      class="w-[calc((100vw/3)-100px)] z-20 p-20 rounded-3xl bg-[#2D1D4E95] backdrop-blur-2xl"
+    >
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores autem
+      laboriosam aut, aliquid ipsam consectetur quo earum. Ea, tempora et
+      debitis consequatur, ut, inventore recusandae facere ducimus soluta odit
+      beatae.
+    </p>
+  </section>
+  <section
+    class="text-white flex flex-wrap gap-6 justify-center items-center w-full h-screen"
+  >
+    <div class="flex flex-col gap-5 justify-center items-center">
+      <img
+        class="h-[calc((100vh/2)-150px)] w-[calc((100vw/3)-100px)] object-cover"
+        src="/img/about.jpeg"
+      />
+      <p class="text-3xl uppercase font-bold">Sebastian</p>
+    </div>
+    <div class="flex flex-col gap-5 justify-center items-center">
+      <img
+        class="h-[calc((100vh/2)-150px)] w-[calc((100vw/3)-100px)] object-cover"
+        src="/img/about.jpeg"
+      />
+      <p class="text-3xl uppercase font-bold">Hanz</p>
+    </div>
+    <div class="flex flex-col gap-5 justify-center items-center">
+      <img
+        class="h-[calc((100vh/2)-150px)] w-[calc((100vw/3)-100px)] object-cover"
+        src="/img/about.jpeg"
+      />
+      <p class="text-3xl uppercase font-bold">Mario</p>
+    </div>
+    <div class="flex flex-col gap-5 justify-center items-center">
+      <img
+        class="h-[calc((100vh/2)-150px)] w-[calc((100vw/3)-100px)] object-cover"
+        src="/img/about.jpeg"
+      />
+      <p class="text-3xl uppercase font-bold">Juan Diego</p>
+    </div>
+    <div class="flex flex-col gap-5 justify-center items-center">
+      <img
+        class="h-[calc((100vh/2)-150px)] w-[calc((100vw/3)-100px)] object-cover"
+        src="/img/about.jpeg"
+      />
+      <p class="text-3xl uppercase font-bold">Zerpa</p>
+    </div>
+  </section>
+  <section class="flex gap-12 p-52 text-white justify-center items-center">
+    <div class="w-[500px]">
+      <h3 class="text-3xl uppercase font-bold">Misión</h3>
+      <p>
+        Brindar a los jóvenes de colegios públicos la información y orientación
+        necesaria sobre los requisitos y oportunidades para acceder a la
+        educación superior y formarse en las áreas que realmente les apasionan.
+      </p>
+    </div>
+    <div class="w-[500px]">
+      <h3 class="text-3xl uppercase font-bold">Visión</h3>
+      <p>
+        Ser reconocidos, en el próximo año, como un proyecto referente en
+        orientación vocacional para instituciones educativas del sector
+        público y privado.
+      </p>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .blackbg {
+    position: relative;
+  }
+
+  .blackbg::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #00000065;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+</style>

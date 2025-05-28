@@ -1,5 +1,8 @@
 ---
+import { ClientRouter } from "astro:transitions";
+import Header from "../components/Header.astro";
 import "../styles/global.css";
+const { title, titleHero, img, active } = Astro.props;
 ---
 
 <!doctype html>
@@ -8,9 +11,11 @@ import "../styles/global.css";
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro Basics</title>
+    <ClientRouter />
+    <title>{title}</title>
   </head>
-  <body>
+  <body class="bg-[#2D1D4E]">
+    <Header titleHero={titleHero} img={img} active={active} />
     <slot />
   </body>
 </html>

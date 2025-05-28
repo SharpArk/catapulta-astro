@@ -1,0 +1,74 @@
+---
+const { titleHero, img, active } = Astro.props;
+---
+
+<header class="w-screen h-[100px] bg-[#2D1D4E95] backdrop-blur-2xl fixed z-50">
+  <nav class="w-full h-full flex justify-around items-center">
+    <a class="uppercase font-bold text-white relative" href="/">
+      Inicio
+      {
+        active == "Home" ? (
+          <div
+            transition:name="Active"
+            class="absolute bottom-0 left-0 w-full h-1 bg-white"
+          />
+        ) : (
+          ""
+        )
+      }
+    </a>
+    <a class="uppercase font-bold text-white relative" href="/Sobre Nosotros">
+      Sobre Nosotros
+      {
+        active == "About" ? (
+          <div
+            transition:name="Active"
+            class="absolute bottom-0 left-0 w-full h-1 bg-white"
+          />
+        ) : (
+          ""
+        )
+      }
+    </a>
+    <a
+      class="uppercase font-bold text-white relative"
+      href="/Salidas Estudiantiles"
+    >
+      Salidas Estudiantiles
+      {
+        active == "Salidas" ? (
+          <div
+            transition:name="Active"
+            class="absolute bottom-0 left-0 w-full h-1 bg-white"
+          />
+        ) : (
+          ""
+        )
+      }
+    </a>
+    <a class="uppercase font-bold text-white relative" href="/Test">
+      Test
+      {
+        active == "Test" ? (
+          <div
+            transition:name="Active"
+            class="absolute bottom-0 left-0 w-full h-1 bg-white"
+          />
+        ) : (
+          ""
+        )
+      }
+    </a>
+    <p class="uppercase font-bold text-white relative">Asesorias</p>
+  </nav>
+</header>
+<section
+  class={`w-full h-screen flex justify-center items-center bg-cover`}
+  style={`background-image: url(/${img})`}
+>
+  <h3
+    class="bg-[#CFC6EC80] text-6xl uppercase font-bold p-4 rounded-4xl border-b-2 border-b-black backdrop-blur-md"
+  >
+    {titleHero}
+  </h3>
+</section>

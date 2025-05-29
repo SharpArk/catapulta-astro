@@ -1,5 +1,23 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+const data = [
+  {
+    Title: "SENA CTGI",
+    Desc: "Centro del SENA especializado en formación técnica y tecnológica en áreas TIC, ubicado en Cartagena. Ofrece programas como desarrollo de software, redes y multimedia, con laboratorios modernos y enfoque en empleabilidad.",
+    image: "Salidas3.jpeg",
+  },
+  {
+    Title: "UDEA",
+    Desc: "Universidad pública en Medellín, destacada en salud, ciencia y tecnología. Ofrece más de 300 programas académicos y es reconocida por su excelencia en investigación y formación profesional.",
+    image: "Salidas3.jpeg",
+  },
+  {
+    Title: "Universidad Nacional",
+    Desc: "Principal universidad pública del país, con sedes en varias ciudades. Brinda una amplia oferta de pregrados y posgrados, con alto reconocimiento nacional e internacional en investigación y calidad académica.",
+    image: "Salidas3.jpeg",
+  },
+];
 ---
 
 <Layout
@@ -8,5 +26,67 @@ import Layout from "../layouts/Layout.astro";
   img="img/Salidas.jpeg"
   active="Salidas"
 >
-  <h1>Salidas</h1>
+  <section
+    class="text-white flex justify-center items-center w-full h-screen gap-60 blackbg bg-[url(/img/Salidas2.jpeg)] bg-cover"
+  >
+    <div class="z-20 text-white">
+      <p
+        class="bg-[#00000075] w-[calc((100vw/3)-100px)] p-5 rounded-3xl backdrop-blur-2xl"
+      >
+        Hoy en día, los jóvenes cuentan con múltiples oportunidades para
+        formarse en áreas clave del desarrollo tecnológico e industrial. Los
+        estudios tecnológicos ofrecen una alternativa práctica, moderna y de
+        alta demanda laboral para quienes desean adquirir habilidades
+        específicas en corto tiempo
+      </p>
+    </div>
+    <div class="z-20 text-white">
+      <img
+        class="w-[500px] h-[500px] object-cover rounded-2xl"
+        src="/img/Salidas3.jpeg"
+        alt=""
+      />
+    </div>
+  </section>
+  <section class="p-52 flex flex-col gap-32">
+    {
+      data.map((e) => (
+        <div class="flex justify-between items-center text-white gap-4">
+          <div class="flex flex-col gap-4">
+            <h1 class="text-2xl font-bold uppercase">{e.Title}</h1>
+            <p class="w-[calc(100vw/2.5)] p-5 rounded-2xl bg-[#00000075]">
+              {e.Desc}
+            </p>
+            <a
+              class="uppercase p-5 bg-[#F09C08] w-fit text-black rounded-full"
+              href={`/Universidades/${e.Title}`}
+            >
+              Ver Más
+            </a>
+          </div>
+          <img
+            class="w-[400px] h-[400px] object-cover rounded-3xl"
+            src={`/img/${e.image}`}
+            alt=""
+          />
+        </div>
+      ))
+    }
+  </section>
 </Layout>
+
+<style>
+  .blackbg {
+    position: relative;
+  }
+
+  .blackbg::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #00000065;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+</style>

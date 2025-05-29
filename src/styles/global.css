@@ -1,5 +1,16 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Coves";
+  src: url("../assets/Coves\ Bold.otf");
+  font-style: normal;
+  font-weight: normal;
+}
+
+* {
+  font-family: "Coves", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
 ::-webkit-scrollbar {
   width: 20px;
   background-color: #2d1d4e;

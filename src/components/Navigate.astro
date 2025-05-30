@@ -1,8 +1,10 @@
 ---
+import Asesorias from "./Navigate/Asesorias";
+
 const { active } = Astro.props;
 ---
 
-<header class="w-screen h-[100px] bg-[#2D1D4E95] backdrop-blur-2xl fixed z-50">
+<header class="w-screen h-[100px] bg-[#2D1D4E95] backdrop-blur-2xl fixed z-40">
   <nav class="w-full h-full flex justify-around items-center">
     <a class="uppercase font-bold text-white relative" href="/">
       Inicio
@@ -59,6 +61,6 @@ const { active } = Astro.props;
         )
       }
     </a>
-    <p class="uppercase font-bold text-white relative">Asesorias</p>
+    <Asesorias client:load />
   </nav>
 </header>

@@ -1,0 +1,61 @@
+---
+import LayoutFundadores from "../../layouts/LayoutFundadores.astro";
+
+export function getStaticPaths() {
+  const data = ["SENA CTGI", "UDEA", "Universidad Nacional"];
+  return data.map((title) => ({
+    params: { title },
+    props: { title },
+  }));
+}
+
+const { title } = Astro.props;
+const data = [
+  {
+    Title: "Tecnólogo en Análisis y Desarrollo de Software",
+    Desc: `Forma profesionales capaces de diseñar, desarrollar, probar y mantener aplicaciones de software, con habilidades en lenguajes de programación, bases de datos y metodologías ágiles.
+
+  Duración: Aproximadamente 2 años (etapas lectiva y productiva).
+  Salidas laborales: Desarrollador de software, programador, analista de sistemas.`,
+    image: "Estudios2.webp",
+  },
+  {
+    Title: "Tecnólogo en Gestión de Redes de Datos",
+    Desc: `Enfocado en la instalación, configuración y administración de redes de datos, seguridad informática y servicios de conectividad.
+
+Duración: 2 años.
+Salidas laborales: Administrador de redes, técnico en telecomunicaciones, soporte TI.`,
+    image: "Estudios2.webp",
+  },
+  {
+    Title: "Tecnólogo en Producción de Multimedia",
+    Desc: `Enseña a diseñar, desarrollar y producir contenidos digitales como animaciones, páginas web, juegos y recursos interactivos para medios digitales.
+
+Duración: 2 años.
+Salidas laborales: Diseñador multimedia, productor de contenidos digitales, desarrollador web front-end.`,
+    image: "Estudios2.webp",
+  },
+];
+---
+
+<LayoutFundadores title={`Catapulta - ${title}`}>
+  <section class="p-52 flex flex-col gap-32">
+    {
+      data.map((e) => (
+        <div class="flex justify-between items-center text-white gap-4">
+          <div class="flex flex-col gap-4">
+            <h1 class="text-2xl font-bold uppercase">{e.Title}</h1>
+            <p class="w-[calc(100vw/2.5)] p-5 rounded-2xl bg-[#00000075]">
+              {e.Desc}
+            </p>
+          </div>
+          <img
+            class="w-[400px] h-[400px] object-cover rounded-3xl"
+            src={`/img/${e.image}`}
+            alt=""
+          />
+        </div>
+      ))
+    }
+  </section>
+</LayoutFundadores>

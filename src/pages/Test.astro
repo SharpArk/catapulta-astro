@@ -1,5 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+export const prerender = true;
 ---
 
 <Layout
@@ -15,6 +17,8 @@ import Layout from "../layouts/Layout.astro";
       class="absolute w-full h-full top-0 left-0 object-cover -z-10"
       src="/img/Test2.webp"
       alt=""
+      loading="lazy"
+      decoding="async"
     />
     <p
       class="absolute w-[calc(100vw/3)] h-fit p-5 rounded-2xl left-5 top-1/2 -translate-y-1/2 z-10 bg-[#00000075] backdrop-blur-2xl text-xl"
@@ -31,6 +35,8 @@ import Layout from "../layouts/Layout.astro";
         class="w-full h-full object-cover p-5 rounded-2xl"
         src="/img/Test3.webp"
         alt=""
+        loading="lazy"
+        decoding="async"
       />
     </div>
     <div class="border-[#2D1D4E] border-8 p-5 rounded-2xl">
@@ -67,6 +73,8 @@ import Layout from "../layouts/Layout.astro";
         class="w-full h-full object-cover rounded-2xl"
         src="/img/Test4.webp"
         alt=""
+        loading="lazy"
+        decoding="async"
       />
     </div>
   </section>

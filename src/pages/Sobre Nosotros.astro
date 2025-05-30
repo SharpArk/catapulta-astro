@@ -1,6 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import SliderImages from "../components/SliderImages";
+
+export const prerender = true;
 ---
 
 <Layout
@@ -16,6 +18,8 @@ import SliderImages from "../components/SliderImages";
       <img
         class="w-[500px] h-[500px] rounded-full object-cover"
         src="/img/SobreNosotros3.webp"
+        loading="lazy"
+        decoding="async"
       />
     </div>
     <p
@@ -30,6 +34,8 @@ import SliderImages from "../components/SliderImages";
       class="absolute w-full h-full top-0 left-0 object-cover gradient-to-right"
       src="/img/SobreNosotros4.webp"
       alt=""
+      loading="lazy"
+      decoding="async"
     />
   </section>
   <section

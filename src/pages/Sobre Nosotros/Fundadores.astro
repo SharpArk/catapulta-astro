@@ -31,6 +31,8 @@ const personData = [
     Reverse: true,
   },
 ];
+
+export const prerender = true;
 ---
 
 <LayoutFundadores title="Catapulta - Fundadores" active="About">
@@ -49,6 +51,8 @@ const personData = [
                 class="w-[270px] aspect-[3/4] object-cover rounded-2xl"
                 src={person.Image}
                 alt=""
+                decoding="async"
+                loading="lazy"
               />
               <p class="uppercase text-2xl font-bold">{person.Name}</p>
             </div>

@@ -4,7 +4,82 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout
   active="Test"
-  img="img/test.jpeg"
+  img="img/Test5.webp"
   title="Catapulta - Test"
   titleHero="Test"
-/>
+>
+  <section
+    class="text-white flex justify-center items-center w-full h-screen gap-60 blackbg bg-cover -z-10"
+  >
+    <img
+      class="absolute w-full h-full top-0 left-0 object-cover -z-10"
+      src="/img/Test2.webp"
+      alt=""
+    />
+    <p
+      class="absolute w-[calc(100vw/3)] h-fit p-5 rounded-2xl left-5 top-1/2 -translate-y-1/2 z-10 bg-[#00000075] backdrop-blur-2xl text-xl"
+    >
+      Elegir una carrera profesional puede ser una decisión difícil para muchos
+      jóvenes. Los test de orientación vocacional son herramientas clave que
+      ayudan a identificar intereses, habilidades y fortalezas personales,
+      facilitando una elección más consciente y acertada.
+    </p>
+  </section>
+  <section class="grid grid-cols-4 grid-rows-2 w-full h-screen p-28 text-white">
+    <div class="col-span-2 border-[#2D1D4E] border-8 p-5 rounded-2xl">
+      <img
+        class="w-full h-full object-cover p-5 rounded-2xl"
+        src="/img/Test3.webp"
+        alt=""
+      />
+    </div>
+    <div class="border-[#2D1D4E] border-8 p-5 rounded-2xl">
+      <p
+        class="bg-[#00000075] w-full h-full flex justify-center items-center p-5 rounded-2xl"
+      >
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero sint,
+        aliquam ab ipsam eos assumenda omnis necessitatibus reiciendis corrupti,
+        doloremque voluptate natus, alias doloribus magnam velit impedit
+        molestiae. Asperiores, unde.
+      </p>
+    </div>
+    <div
+      class="row-span-2 bg-blue-50 border-[#2D1D4E] border-8 rounded-2xl flex justify-center items-center p-3"
+    >
+      <p class="text-black text-4xl cursor-pointer">Realiza el test aquí >></p>
+    </div>
+    <div class="col-span-2 border-[#2D1D4E] border-8 p-5 rounded-2xl">
+      <p
+        class="bg-[#00000075] w-full h-full flex justify-center items-center p-5 rounded-2xl"
+      >
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero sint,
+        aliquam ab ipsam eos assumenda omnis necessitatibus reiciendis corrupti,
+        doloremque voluptate natus, alias doloribus magnam velit impedit
+        molestiae. Asperiores, unde.
+      </p>
+    </div>
+    <div class="border-[#2D1D4E] border-8 p-5 rounded-2xl">
+      <img
+        class="w-full h-full object-cover rounded-2xl"
+        src="/img/Test4.webp"
+        alt=""
+      />
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .blackbg {
+    position: relative;
+  }
+
+  .blackbg::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #00000065;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+</style>

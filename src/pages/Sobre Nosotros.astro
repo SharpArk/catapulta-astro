@@ -7,15 +7,15 @@ import SliderImages from "../components/SliderImages";
   title="Catapulta - Sobre Nosotros"
   active="About"
   titleHero="Sobre Nosotros"
-  img="img/about.jpeg"
+  img="img/SobreNosotros2.webp"
 >
   <section
-    class="text-white flex justify-center items-center w-full h-screen gap-60 blackbg bg-[url(/img/About3.jpeg)] bg-cover"
+    class="text-white flex justify-center items-center w-full h-screen gap-60 blackbg] bg-cover relative"
   >
     <div class="flex flex-col justify-center items-center z-20">
       <img
         class="w-[500px] h-[500px] rounded-full object-cover"
-        src="/img/about2.jpeg"
+        src="/img/SobreNosotros3.webp"
       />
     </div>
     <p
@@ -26,6 +26,11 @@ import SliderImages from "../components/SliderImages";
       debitis consequatur, ut, inventore recusandae facere ducimus soluta odit
       beatae.
     </p>
+    <img
+      class="absolute w-full h-full top-0 left-0 object-cover gradient-to-right"
+      src="/img/SobreNosotros4.webp"
+      alt=""
+    />
   </section>
   <section
     class="flex gap-60 text-white justify-center items-center h-[calc(100vh/2)]"
@@ -67,5 +72,9 @@ import SliderImages from "../components/SliderImages";
     position: absolute;
     top: 0;
     left: 0;
+  }
+
+  .gradient-to-right {
+    mask-image: linear-gradient(to left, black 10%, transparent, transparent);
   }
 </style>

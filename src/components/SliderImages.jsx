@@ -1,11 +1,11 @@
 import { useState } from "react";
 function SliderImages() {
   const images = [
-    { img: "/img/heroimg-1.jpeg" },
-    { img: "/img/heroimg-2.jpeg" },
-    { img: "/img/heroimg-3.jpeg" },
-    { img: "/img/heroimg-4.jpeg" },
-    { img: "/img/heroimg-5.jpeg" },
+    { img: "/img/Heroimg-1.webp" },
+    { img: "/img/Heroimg-2.webp" },
+    { img: "/img/Heroimg-3.webp" },
+    { img: "/img/Heroimg-4.webp" },
+    { img: "/img/Heroimg-5.webp" },
   ];
 
   const [position, setPosition] = useState(0);
@@ -75,7 +75,7 @@ function SliderImages() {
           &#62;
         </button>
         <a
-          className={`absolute uppercase text-3xl bottom-0 font-bold text-white p-5 rounded-2xl bg-[#00000060] z-10 w-fit link backdrop-blur-md`}
+          className={`absolute uppercase text-3xl bottom-2 font-bold text-white p-5 rounded-2xl bg-[#00000060] z-10 w-fit link backdrop-blur-md`}
           href="/Sobre Nosotros/Fundadores"
           style={
             isActive

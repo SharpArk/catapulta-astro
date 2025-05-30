@@ -5,17 +5,17 @@ const data = [
   {
     Title: "SENA CTGI",
     Desc: "Centro del SENA especializado en formación técnica y tecnológica en áreas TIC, ubicado en Cartagena. Ofrece programas como desarrollo de software, redes y multimedia, con laboratorios modernos y enfoque en empleabilidad.",
-    image: "Salidas3.jpeg",
+    image: "SENA.webp",
   },
   {
     Title: "UDEA",
     Desc: "Universidad pública en Medellín, destacada en salud, ciencia y tecnología. Ofrece más de 300 programas académicos y es reconocida por su excelencia en investigación y formación profesional.",
-    image: "Salidas3.jpeg",
+    image: "UDEA.webp",
   },
   {
     Title: "Universidad Nacional",
     Desc: "Principal universidad pública del país, con sedes en varias ciudades. Brinda una amplia oferta de pregrados y posgrados, con alto reconocimiento nacional e internacional en investigación y calidad académica.",
-    image: "Salidas3.jpeg",
+    image: "UNAL.webp",
   },
 ];
 ---
@@ -23,11 +23,11 @@ const data = [
 <Layout
   title="Catapulta - Salidas Estudiantiles"
   titleHero="Salidas Estudiantiles"
-  img="img/Salidas.jpeg"
+  img="img/About.webp"
   active="Salidas"
 >
   <section
-    class="text-white flex justify-center items-center w-full h-screen gap-60 blackbg bg-[url(/img/Salidas2.jpeg)] bg-cover"
+    class="text-white flex justify-center items-center w-full h-screen gap-60 blackbg bg-cover"
   >
     <div class="z-20 text-white">
       <p
@@ -43,10 +43,15 @@ const data = [
     <div class="z-20 text-white">
       <img
         class="w-[500px] h-[500px] object-cover rounded-2xl"
-        src="/img/Salidas3.jpeg"
+        src="/img/Estudios4.webp"
         alt=""
       />
     </div>
+    <img
+      class="absolute top-0 left-0 w-full h-full object-cover right-to-left"
+      src="/img/Estudios3.webp"
+      alt=""
+    />
   </section>
   <section class="p-52 flex flex-col gap-32">
     {
@@ -88,5 +93,9 @@ const data = [
     position: absolute;
     top: 0;
     left: 0;
+  }
+
+  .right-to-left {
+    mask-image: linear-gradient(to right, black 10%, transparent, transparent);
   }
 </style>

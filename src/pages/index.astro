@@ -32,10 +32,15 @@ import Layout from "../layouts/Layout.astro";
     </div>
   </section>
   <section
-    class="bg-[url(/img/sect-2.jpeg)] w-full h-screen bg-cover relative flex justify-center items-center gap-44 blackbg"
+    class="w-full h-screen bg-cover relative flex justify-center items-center gap-44 blackbg"
   >
+    <img
+      class="object-cover w-full h-full absolute top-0 left-0 right-to-left"
+      src="/img/sect-2.jpeg"
+      alt=""
+    />
     <div class="w-[calc(100vw/3)] flex flex-col gap-4 z-20">
-      <h3 class="text-[#E76889] font-bold text-4xl uppercase">
+      <h3 class="text-white font-bold text-4xl uppercase">
         Salidas Estudiantiles
       </h3>
       <p class="text-white bg-[#CFC6EC30] p-9 rounded-4xl backdrop-blur-2xl">
@@ -106,5 +111,21 @@ import Layout from "../layouts/Layout.astro";
     position: absolute;
     top: 0;
     left: 0;
+  }
+
+  .right-to-left {
+    mask-image: linear-gradient(to right, black 10%, transparent, transparent);
+  }
+
+  @keyframes scale-up {
+    to {
+      scale: 1.5;
+    }
+  }
+
+  @keyframes fade-away {
+    to {
+      opacity: 0;
+    }
   }
 </style>

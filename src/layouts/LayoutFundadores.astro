@@ -1,9 +1,8 @@
 ---
 import { ClientRouter } from "astro:transitions";
-import Header from "../components/Header";
-import "../styles/global.css";
 import Navigate from "../components/Navigate.astro";
-const { title, titleHero, img, active } = Astro.props;
+const { title, active } = Astro.props;
+import "../styles/global.css";
 ---
 
 <!doctype html>
@@ -16,9 +15,7 @@ const { title, titleHero, img, active } = Astro.props;
     <title>{title}</title>
   </head>
   <body class="bg-[#2D1D4E]">
-    <Header titleHero={titleHero} img={img}>
-      <Navigate active={active} />
-    </Header>
+    <Navigate active={active} />
     <slot />
   </body>
 </html>

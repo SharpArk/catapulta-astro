@@ -1,5 +1,5 @@
 ---
-const { titleHero, img, active } = Astro.props;
+const { active } = Astro.props;
 ---
 
 <header class="w-screen h-[100px] bg-[#2D1D4E95] backdrop-blur-2xl fixed z-50">
@@ -62,13 +62,3 @@ const { titleHero, img, active } = Astro.props;
     <p class="uppercase font-bold text-white relative">Asesorias</p>
   </nav>
 </header>
-<section
-  class={`w-full h-[calc(100vh-200px)] flex justify-center items-center bg-cover`}
-  style={`background-image: url(/${img})`}
->
-</section>
-<section
-  class="h-[200px] w-full flex justify-center items-center text-white font-bold uppercase text-2xl"
->
-  <h1>{titleHero}</h1>
-</section>

@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import SliderImages from "../components/SliderImages";
 ---
 
 <Layout
@@ -27,55 +28,6 @@ import Layout from "../layouts/Layout.astro";
     </p>
   </section>
   <section
-    class="text-white flex flex-wrap gap-6 justify-center items-center w-full h-screen"
-  >
-    <div
-      class="flex flex-col gap-3 justify-center items-center h-[calc((100vh/2)-150px)] w-[calc((100vw/3)-100px)] bg-[#00000060] p-2 rounded-3xl"
-    >
-      <img
-        class="object-cover w-1/2 h-full rounded-3xl"
-        src="/img/about.jpeg"
-      />
-      <p class="text-3xl uppercase font-bold">Sebastian</p>
-    </div>
-    <div
-      class="flex flex-col gap-3 justify-center items-center h-[calc((100vh/2)-150px)] w-[calc((100vw/3)-100px)] bg-[#00000060] p-2 rounded-3xl"
-    >
-      <img
-        class="object-cover w-1/2 h-full rounded-3xl"
-        src="/img/about.jpeg"
-      />
-      <p class="text-3xl uppercase font-bold">Hanz</p>
-    </div>
-    <div
-      class="flex flex-col gap-3 justify-center items-center h-[calc((100vh/2)-150px)] w-[calc((100vw/3)-100px)] bg-[#00000060] p-2 rounded-3xl"
-    >
-      <img
-        class="object-cover w-1/2 h-full rounded-3xl"
-        src="/img/about.jpeg"
-      />
-      <p class="text-3xl uppercase font-bold">Mario</p>
-    </div>
-    <div
-      class="flex flex-col gap-3 justify-center items-center h-[calc((100vh/2)-150px)] w-[calc((100vw/3)-100px)] bg-[#00000060] p-2 rounded-3xl"
-    >
-      <img
-        class="object-cover w-1/2 h-full rounded-3xl"
-        src="/img/about.jpeg"
-      />
-      <p class="text-3xl uppercase font-bold">Juan Diego</p>
-    </div>
-    <div
-      class="flex flex-col gap-3 justify-center items-center h-[calc((100vh/2)-150px)] w-[calc((100vw/3)-100px)] bg-[#00000060] p-2 rounded-3xl"
-    >
-      <img
-        class="object-cover w-1/2 h-full rounded-3xl"
-        src="/img/about.jpeg"
-      />
-      <p class="text-3xl uppercase font-bold">Zerpa</p>
-    </div>
-  </section>
-  <section
     class="flex gap-60 text-white justify-center items-center h-[calc(100vh/2)]"
   >
     <div
@@ -99,6 +51,7 @@ import Layout from "../layouts/Layout.astro";
       </p>
     </div>
   </section>
+  <SliderImages client:load />
 </Layout>
 
 <style>

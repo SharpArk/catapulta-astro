@@ -3,6 +3,7 @@ import { ClientRouter } from "astro:transitions";
 import Navigate from "../components/Navigate.astro";
 const { title, active } = Astro.props;
 import "../styles/global.css";
+import Footer from "../components/footer.astro";
 ---
 
 <!doctype html>
@@ -17,5 +18,6 @@ import "../styles/global.css";
   <body class="bg-[#2D1D4E]">
     <Navigate active={active} />
     <slot />
+    <Footer />
   </body>
 </html>

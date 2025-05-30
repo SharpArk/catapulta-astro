@@ -1,6 +1,69 @@
 ---
 import Layout from "../layouts/Layout.astro";
 
+const comentarios = [
+  {
+    nombre: "Lucía Gómez",
+    fecha: "2025-05-25",
+    comentario:
+      "Gracias a Catapulta, pude descubrir mi verdadera vocación. Ahora estudio lo que realmente me apasiona. ¡Mil gracias!",
+  },
+  {
+    nombre: "Carlos Méndez",
+    fecha: "2025-05-28",
+    comentario:
+      "Increíble iniciativa. Me ayudaron a no perder tiempo en una carrera que no era para mí. Muy agradecido.",
+  },
+  {
+    nombre: "Fernanda Ruiz",
+    fecha: "2025-05-30",
+    comentario:
+      "Catapulta me dio claridad cuando más lo necesitaba. Hoy estoy feliz con mi decisión gracias a su orientación. ¡Sigan así!",
+  },
+  {
+    nombre: "Julián Torres",
+    fecha: "2025-05-30",
+    comentario:
+      "Agradezco de corazón la ayuda que recibí. Gracias a ustedes encontré el camino correcto. ¡Excelente trabajo!",
+  },
+  {
+    nombre: "Valentina Herrera",
+    fecha: "2025-05-29",
+    comentario:
+      "Estaba muy perdida con mi futuro y Catapulta fue una guía increíble. Gracias por brindar tanta claridad.",
+  },
+  {
+    nombre: "Mateo Ramírez",
+    fecha: "2025-05-27",
+    comentario:
+      "¡Qué gran herramienta! Me permitió explorar opciones que ni sabía que existían. Muy recomendado.",
+  },
+  {
+    nombre: "Isabela Contreras",
+    fecha: "2025-05-26",
+    comentario:
+      "Gracias a Catapulta, me inscribí en una carrera que realmente me entusiasma. ¡No más dudas ni cambios!",
+  },
+  {
+    nombre: "Andrés Villalba",
+    fecha: "2025-05-30",
+    comentario:
+      "Un servicio que todos los jóvenes deberían conocer. Gracias por su apoyo y orientación tan humana.",
+  },
+  {
+    nombre: "Camila Duarte",
+    fecha: "2025-05-30",
+    comentario:
+      "Agradezco profundamente la oportunidad de conocer mis fortalezas. Gracias, Catapulta, por darme dirección.",
+  },
+  {
+    nombre: "Sebastián Rojas",
+    fecha: "2025-05-30",
+    comentario:
+      "Muy útil, muy claro, y sobre todo, muy humano. Gracias Catapulta por acompañarme en este proceso tan difícil.",
+  },
+];
+
 export const prerender = true;
 ---
 
@@ -76,6 +139,26 @@ export const prerender = true;
         loading="lazy"
         decoding="async"
       />
+    </div>
+  </section>
+  <section class="w-full bg-gray-900 py-10">
+    <h2 class="text-3xl font-bold text-center text-white mb-8">Testimonios</h2>
+    <div
+      class="max-w-4xl mx-auto grid gap-6 md:grid-cols-2 lg:grid-cols-3 px-4"
+    >
+      {
+        comentarios.map(({ nombre, fecha, comentario }) => (
+          <div class="bg-white/90 rounded-lg shadow-lg p-6 flex flex-col gap-2">
+            <p class="text-gray-800 text-base mb-2">"{comentario}"</p>
+            <div class="flex justify-between items-center mt-auto">
+              <span class="text-sm font-semibold text-indigo-700">
+                {nombre}
+              </span>
+              <span class="text-xs text-gray-500">{fecha}</span>
+            </div>
+          </div>
+        ))
+      }
     </div>
   </section>
 </Layout>

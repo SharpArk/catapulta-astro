@@ -1,10 +1,10 @@
 import { useState } from "react";
 function SliderImages() {
   const images = [
-    { img: "/img/Heroimg-1.webp" },
-    { img: "/img/Heroimg-2.webp" },
+    { img: "/img/Fundadores/horizontal/sebas.jpg" },
+    { img: "/img/Fundadores/horizontal/hanz.jpg" },
     { img: "/img/Heroimg-3.webp" },
-    { img: "/img/Heroimg-4.webp" },
+    { img: "/img/Fundadores/horizontal/Mario.jpg" },
     { img: "/img/Heroimg-5.webp" },
   ];
 

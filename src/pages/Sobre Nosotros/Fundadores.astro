@@ -5,30 +5,36 @@ const personData = [
   {
     Name: "Sebastian",
     Description:
-      "Centro del SENA especializado en formación técnica y tecnológica en áreas TIC, ubicado en Cartagena. Ofrece programas como desarrollo de software, redes y multimedia, con laboratorios modernos y enfoque en empleabilidad.",
-    Image: "/img/Heroimg-1.webp",
+      "Joven de 20 años con sueños y metas claras; nada es imposible para él. Muy orgulloso y respetuoso, con un gran gusto por la tecnología, siempre busca hacer las cosas lo mejor posible. Su actitud positiva y disciplina lo impulsan a aprender constantemente, participar en proyectos innovadores y superar cualquier obstáculo, con la convicción de que alcanzará sus objetivos y dejará una huella positiva en su entorno.",
+    Image: "/img/Fundadores/sebas.jpg",
     Reverse: false,
   },
   {
     Name: "Zerpa",
     Description:
       "Centro del SENA especializado en formación técnica y tecnológica en áreas TIC, ubicado en Cartagena. Ofrece programas como desarrollo de software, redes y multimedia, con laboratorios modernos y enfoque en empleabilidad.",
-    Image: "/img/Heroimg-2.webp",
+    Image: "/img/Fundadores/zerpa.jpg",
     Reverse: true,
   },
   {
-    Name: "Hanz",
+    Name: "Hanz Miuller",
     Description:
-      "Centro del SENA especializado en formación técnica y tecnológica en áreas TIC, ubicado en Cartagena. Ofrece programas como desarrollo de software, redes y multimedia, con laboratorios modernos y enfoque en empleabilidad.",
-    Image: "/img/Heroimg-3.webp",
+      "joven de 18 años amante a las matemáticas, a las cosas relacionadas con la tecnología y la computación, quiere salir adelante, cumplir sus sueños, se destaca por su amor al deporte a la lectura, aunque también tiene algunos defectos que aveces es algo irresponsable y bastante perezoso, pero a la hora de trabajar le gusta destacar",
+    Image: "/img/Fundadores/hanz.jpg",
     Reverse: false,
   },
   {
     Name: "Mario",
     Description:
       "Centro del SENA especializado en formación técnica y tecnológica en áreas TIC, ubicado en Cartagena. Ofrece programas como desarrollo de software, redes y multimedia, con laboratorios modernos y enfoque en empleabilidad.",
-    Image: "/img/Heroimg-4.webp",
+    Image: "/img/Fundadores/mario.jpg",
     Reverse: true,
+  },
+  {
+    Name: "Juan Diego",
+    Description:
+      "Centro del SENA especializado en formación técnica y tecnológica en áreas TIC, ubicado en Cartagena. Ofrece programas como desarrollo de software, redes y multimedia, con laboratorios modernos y enfoque en empleabilidad.",
+    Image: "/img/Fundadores/Juandi.png",
   },
 ];
 
@@ -57,7 +63,9 @@ export const prerender = true;
               <p class="uppercase text-2xl font-bold">{person.Name}</p>
             </div>
             <div class="w-fit h-fit p-5 bg-[#00000075] rounded-2xl">
-              <p class="w-[calc((100vw/3)-100px)]">{person.Description}</p>
+              <p class="text-xl w-[calc((100vw/3)-100px)]">
+                {person.Description}
+              </p>
             </div>
           </div>
         ))

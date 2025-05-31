@@ -7,7 +7,7 @@ function Asesorias() {
   return (
     <>
       <p
-        className="uppercase font-bold text-white relative cursor-pointer overflow-hidden"
+        className="text-xl uppercase font-bold text-white relative cursor-pointer overflow-hidden"
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
         onClick={() => setActive(true)}
@@ -16,54 +16,54 @@ function Asesorias() {
         <div
           className="absolute w-full h-1 bg-white bottom-0"
           style={{ left: hover ? "0%" : "100%", transition: ".2s ease" }}
-        ></div>
+        />
       </p>
+
       <div
-        className="absolute w-xl h-screen bg-gradient-to-l from-[#212E4A] to-[#b2a1df] top-0 z-[1000]"
-        style={{ right: active ? "0" : "-100%", transition: "1s ease" }}
+        className="fixed top-0 right-0 w-[500px] max-w-full h-screen bg-gradient-to-l from-[#212E4A] to-[#b2a1df] z-[1000] transition-all duration-700 ease-in-out"
+        style={{ transform: active ? "translateX(0%)" : "translateX(100%)" }}
       >
-        <div className="w-full h-full relative flex flex-col justify-center items-center p-[100px] gap-4">
-          <div>
-            <p
-              className="absolute left-2 top-2 text-4xl cursor-pointer"
-              onClick={() => setActive(false)}
-            >
-              X
-            </p>
-          </div>
-          <p className="text-2xl">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Id,
-            suscipit commodi harum aperiam sapiente culpa sed eaque soluta
-            ducimus optio ex nesciunt cum quod odio, earum fuga tempore at
-            laboriosam!
+        <div className="w-full h-full relative flex flex-col justify-center items-center p-10 gap-4">
+          <button
+            className="absolute left-4 top-4 text-4xl text-white hover:text-[#E76889] transition"
+            onClick={() => setActive(false)}
+            aria-label="Cerrar"
+          >
+            ×
+          </button>
+
+          <p className="text-2xl text-white text-center">
+            ¿Tienes dudas o quieres orientación? Déjanos tus datos y un mensaje,
+            y nos pondremos en contacto contigo.
           </p>
-          <form className="w-full h-fit flex flex-col gap-2 justify-center items-center">
+
+          <form className="w-full flex flex-col gap-4 justify-center items-center text-black">
             <input
-              className="border-2 rounded-2xl h-10 w-full pl-2"
+              className="border-2 rounded-2xl h-10 w-full px-4"
               type="text"
               autoComplete="off"
               placeholder="Nombre"
             />
             <input
-              className="border-2 rounded-2xl h-10 w-full pl-2"
+              className="border-2 rounded-2xl h-10 w-full px-4"
               type="text"
               autoComplete="off"
-              placeholder="Telefono"
+              placeholder="Teléfono"
             />
             <input
-              className="border-2 rounded-2xl h-10 w-full pl-2"
-              type="text"
+              className="border-2 rounded-2xl h-10 w-full px-4"
+              type="email"
               autoComplete="off"
               placeholder="Correo"
             />
             <textarea
               autoComplete="off"
               placeholder="Déjanos tu mensaje"
-              className="min-h-52 max-h-80 border-2 rounded-2xl w-full pl-2"
-            ></textarea>
+              className="min-h-52 max-h-80 border-2 rounded-2xl w-full px-4 py-2"
+            />
             <button
-              className="w-fit h-fit p-5 py-2 rounded-full bg-[#E76889] cursor-pointer hover:bg-[#2D1D4E] text-white"
-              style={{ transition: ".2s ease" }}
+              type="submit"
+              className="w-fit px-8 py-2 rounded-full bg-[#E76889] hover:bg-[#2D1D4E] text-white transition"
             >
               ENVIAR
             </button>

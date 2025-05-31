@@ -10,42 +10,102 @@ export function getStaticPaths() {
 }
 
 const { title } = Astro.props;
-const data = [
-  {
-    Title: "Tecnólogo en Análisis y Desarrollo de Software",
-    Desc: `Forma profesionales capaces de diseñar, desarrollar, probar y mantener aplicaciones de software, con habilidades en lenguajes de programación, bases de datos y metodologías ágiles.
+export const data = {
+  "SENA CTGI": [
+    {
+      Title: "Tecnólogo en Análisis y Desarrollo de Software",
+      Desc: `Forma profesionales capaces de diseñar, desarrollar, probar y mantener aplicaciones de software, con habilidades en lenguajes de programación, bases de datos y metodologías ágiles.
 
-  Duración: Aproximadamente 2 años (etapas lectiva y productiva).
-  Salidas laborales: Desarrollador de software, programador, analista de sistemas.`,
-    image: "Estudios2.webp",
-  },
-  {
-    Title: "Tecnólogo en Gestión de Redes de Datos",
-    Desc: `Enfocado en la instalación, configuración y administración de redes de datos, seguridad informática y servicios de conectividad.
+Duración: Aproximadamente 2 años (etapas lectiva y productiva).
+Salidas laborales: Desarrollador de software, programador, analista de sistemas.`,
+      image: "Estudios2.webp",
+    },
+    {
+      Title: "Tecnólogo en Gestión de Redes de Datos",
+      Desc: `Enfocado en la instalación, configuración y administración de redes de datos, seguridad informática y servicios de conectividad.
 
 Duración: 2 años.
 Salidas laborales: Administrador de redes, técnico en telecomunicaciones, soporte TI.`,
-    image: "Estudios2.webp",
-  },
-  {
-    Title: "Tecnólogo en Producción de Multimedia",
-    Desc: `Enseña a diseñar, desarrollar y producir contenidos digitales como animaciones, páginas web, juegos y recursos interactivos para medios digitales.
+      image: "Estudios2.webp",
+    },
+    {
+      Title: "Tecnólogo en Producción de Multimedia",
+      Desc: `Enseña a diseñar, desarrollar y producir contenidos digitales como animaciones, páginas web, juegos y recursos interactivos para medios digitales.
 
 Duración: 2 años.
 Salidas laborales: Diseñador multimedia, productor de contenidos digitales, desarrollador web front-end.`,
-    image: "Estudios2.webp",
-  },
-];
+      image: "Estudios2.webp",
+    },
+  ],
+  UDEA: [
+    {
+      Title: "Medicina",
+      Desc: `Este programa forma médicos generales con una sólida base científica, ética y humanística. El plan de estudios se divide en tres ciclos: básico, intermedio y clínico. Durante los últimos semestres, los estudiantes realizan prácticas clínicas y comunitarias en diversos servicios de salud, preparándolos para atender integralmente las necesidades de salud de individuos y comunidades.
+
+Duración: 13 semestres (aproximadamente 6 años)
+Modalidad: Presencial
+Título otorgado: Médico(a) y Cirujano(a)`,
+      image: "Estudios2.webp",
+    },
+    {
+      Title: "Ingeniería Industrial",
+      Desc: `Esta carrera capacita a profesionales para analizar, diseñar y optimizar procesos en sistemas productivos y de servicios. Los egresados están preparados para mejorar la eficiencia, calidad y productividad en organizaciones, aplicando conocimientos en gestión, economía, logística y tecnología.
+
+Duración: 10 semestres
+Modalidad: Presencial y virtual
+Título otorgado: Ingeniero(a) Industrial`,
+      image: "Estudios2.webp",
+    },
+    {
+      Title: "Psicología",
+      Desc: `El programa de Psicología ofrece una formación integral en el estudio de los procesos mentales y el comportamiento humano. Los egresados pueden desempeñarse en diversos campos como el clínico, social-comunitario, organizacional, educativo, jurídico y deportivo, realizando evaluaciones, intervenciones y proyectos de investigación que contribuyan al bienestar individual y colectivo.
+
+Duración: 10 semestres
+Modalidad: Presencial
+Título otorgado: Psicólogo(a)`,
+      image: "Estudios2.webp",
+    },
+  ],
+  "Universidad Nacional": [
+    {
+      Title: "Arquitectura",
+      Desc: `Este programa forma profesionales capaces de diseñar, planificar y construir espacios arquitectónicos que respondan a las necesidades sociales, culturales y ambientales. Los estudiantes desarrollan habilidades en diseño, teoría, historia y tecnología de la arquitectura, preparándose para enfrentar los desafíos del entorno construido.
+
+Duración: 10 semestres
+Modalidad: Presencial
+Título otorgado: Arquitecto(a)`,
+      image: "Estudios2.webp",
+    },
+    {
+      Title: "Ingeniería Civil",
+      Desc: `La carrera de Ingeniería Civil prepara profesionales para diseñar, construir y mantener infraestructuras como carreteras, puentes, edificaciones y sistemas hidráulicos. El programa enfatiza una formación integral que combina conocimientos técnicos con una comprensión de las implicaciones sociales y ambientales de las obras civiles.
+
+Duración: 10 semestres
+Modalidad: Presencial
+Título otorgado: Ingeniero(a) Civil`,
+      image: "Estudios2.webp",
+    },
+    {
+      Title: "Ciencias de la Computación",
+      Desc: `Este programa forma profesionales con sólidos conocimientos en algoritmos, estructuras de datos, inteligencia artificial, desarrollo de software y otras áreas fundamentales de la computación. Los egresados están capacitados para enfrentar los retos tecnológicos actuales y contribuir al avance de la ciencia y la industria informática.
+
+Duración: 10 semestres
+Modalidad: Presencial
+Título otorgado: Científico(a) de la Computación`,
+      image: "Estudios2.webp",
+    },
+  ],
+};
 ---
 
 <LayoutFundadores title={`Catapulta - ${title}`}>
   <section class="p-52 flex flex-col gap-32">
     {
-      data.map((e) => (
+      data[title]?.map((e) => (
         <div class="flex justify-between items-center text-white gap-4">
           <div class="flex flex-col gap-4">
             <h1 class="text-2xl font-bold uppercase">{e.Title}</h1>
-            <p class="w-[calc(100vw/2.5)] p-5 rounded-2xl bg-[#00000075]">
+            <p class="text-xl w-[calc(100vw/2.5)] p-5 rounded-2xl bg-[#00000075]">
               {e.Desc}
             </p>
           </div>

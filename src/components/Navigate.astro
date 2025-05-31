@@ -8,7 +8,7 @@ export const prerender = true;
 
 <header class="w-screen h-[100px] bg-[#2D1D4E95] backdrop-blur-2xl fixed z-40">
   <nav class="w-full h-full flex justify-around items-center">
-    <a class="uppercase font-bold text-white relative" href="/">
+    <a class="text-xl uppercase font-bold text-white relative" href="/">
       <img class="w-[100px] p-2" src="/astro.svg" alt="" />
       {
         active == "Home" ? (
@@ -21,7 +21,10 @@ export const prerender = true;
         )
       }
     </a>
-    <a class="uppercase font-bold text-white relative" href="/Sobre Nosotros">
+    <a
+      class="text-xl uppercase font-bold text-white relative"
+      href="/Sobre Nosotros"
+    >
       Sobre Nosotros
       {
         active == "About" ? (
@@ -35,7 +38,7 @@ export const prerender = true;
       }
     </a>
     <a
-      class="uppercase font-bold text-white relative"
+      class="text-xl uppercase font-bold text-white relative"
       href="/Salidas Estudiantiles"
     >
       Salidas Estudiantiles
@@ -50,7 +53,7 @@ export const prerender = true;
         )
       }
     </a>
-    <a class="uppercase font-bold text-white relative" href="/Test">
+    <a class="text-xl uppercase font-bold text-white relative" href="/Test">
       Test
       {
         active == "Test" ? (

@@ -9,12 +9,12 @@ export const prerender = true;
 <header class="w-screen h-[100px] bg-[#2D1D4E95] backdrop-blur-2xl fixed z-40">
   <nav class="w-full h-full flex justify-around items-center">
     <a class="uppercase font-bold text-white relative" href="/">
-      <img class="w-[100px] p-2 rounded-2xl bg-white" src="/astro.svg" alt="" />
+      <img class="w-[100px] p-2" src="/astro.svg" alt="" />
       {
         active == "Home" ? (
           <div
             transition:name="Active"
-            class="absolute -bottom-2 left-0 w-full h-1 bg-white"
+            class="absolute bottom-0 left-0 w-full h-1 bg-white"
           />
         ) : (
           ""

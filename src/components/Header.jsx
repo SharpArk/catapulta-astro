@@ -7,7 +7,11 @@ const Header = ({ titleHero, img, children }) => {
         style={{ backgroundImage: `url(/${img})` }}
       ></section>
       <section className="h-[200px] w-full flex justify-center items-center text-white font-bold uppercase text-2xl">
-        <h1>{titleHero}</h1>
+        {titleHero == "Catapulta" ? (
+          <img className="w-1/3" src="/astro.svg" />
+        ) : (
+          <h1>{titleHero}</h1>
+        )}
       </section>
     </>
   );

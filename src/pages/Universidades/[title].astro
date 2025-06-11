@@ -105,20 +105,18 @@ Título otorgado: Científico(a) de la Computación`,
 ---
 
 <LayoutFundadores title={`Catapulta - ${title}`}>
-  <section class="p-52 flex flex-col gap-32">
+  <section class="p-8 md:p-20 flex flex-col gap-12">
     {
       data[title]?.map((e) => (
-        <div class="flex justify-between items-center text-white gap-4">
-          <div class="flex flex-col gap-4">
-            <h1 class="text-2xl font-bold uppercase">{e.Title}</h1>
-            <p class="text-xl w-[calc(100vw/2.5)] p-5 rounded-2xl bg-[#00000075]">
-              {e.Desc}
-            </p>
+        <div class="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-10 w-full text-white">
+          <div class="md:w-1/2">
+            <h1 class="text-2xl font-bold uppercase mb-4">{e.Title}</h1>
+            <p class="text-lg bg-[#00000075] p-4 rounded-2xl">{e.Desc}</p>
           </div>
           <img
-            class="w-[620px] h-[400px] object-cover rounded-3xl"
-            src={`${e.image}`}
-            alt=""
+            class="md:w-1/2 w-full h-auto rounded-3xl object-cover"
+            src={e.image}
+            alt={e.Title}
           />
         </div>
       ))

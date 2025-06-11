@@ -73,18 +73,19 @@ export const prerender = true;
   title="Catapulta - Test"
   titleHero="Test"
 >
+  <!-- Hero -->
   <section
-    class="text-white flex justify-center items-center w-full h-screen gap-60 blackbg bg-cover -z-10"
+    class="relative w-full min-h-screen flex items-center justify-center px-6 py-10 text-white blackbg bg-cover"
   >
     <img
-      class="absolute w-full h-full top-0 left-0 object-cover -z-10"
+      class="absolute w-full h-full object-cover top-0 left-0 -z-10"
       src="/img/Test2.webp"
-      alt=""
+      alt="Fondo vocacional"
       loading="lazy"
       decoding="async"
     />
     <p
-      class="absolute w-[calc(100vw/3)] h-fit p-5 rounded-2xl left-5 top-1/2 -translate-y-1/2 z-10 bg-[#00000075] backdrop-blur-2xl text-xl"
+      class="bg-[#00000075] backdrop-blur-2xl text-base md:text-xl max-w-xl rounded-2xl p-6 z-10"
     >
       Elegir una carrera profesional puede ser una decisión difícil para muchos
       jóvenes. Los test de orientación vocacional son herramientas clave que
@@ -92,77 +93,91 @@ export const prerender = true;
       facilitando una elección más consciente y acertada.
     </p>
   </section>
-  <section class="grid grid-cols-4 grid-rows-2 w-full h-screen p-28 text-white">
-    <div class="col-span-2 border-[#2D1D4E] border-8 p-5 rounded-2xl">
+
+  <!-- Información y Llamado a la Acción -->
+  <section
+    class="grid grid-cols-1 lg:grid-cols-4 grid-rows-4 lg:grid-rows-2 gap-6 p-6 md:p-12 text-white"
+  >
+    <!-- Imagen principal -->
+    <div
+      class="lg:col-span-2 row-span-1 lg:row-span-2 border-8 border-[#2D1D4E] rounded-2xl overflow-hidden"
+    >
       <img
-        class="w-full h-full object-cover p-5 rounded-2xl"
+        class="w-full h-full object-cover"
         src="/img/Test3.webp"
-        alt=""
+        alt="Estudiantes"
         loading="lazy"
         decoding="async"
       />
     </div>
-    <div class="border-[#2D1D4E] border-8 p-5 rounded-2xl">
-      <p
-        class="bg-[#00000075] w-full h-full flex justify-center items-center p-5 rounded-2xl"
-      >
+
+    <!-- Texto 1 -->
+    <div
+      class="border-8 border-[#2D1D4E] rounded-2xl p-4 bg-[#00000075] backdrop-blur-xl flex items-center"
+    >
+      <p class="text-sm md:text-base">
         Hoy en día, los jóvenes cuentan con múltiples oportunidades para
         formarse en áreas clave del desarrollo tecnológico e industrial. Los
         estudios tecnológicos ofrecen una alternativa práctica, moderna y de
         alta demanda laboral para quienes desean adquirir habilidades
-        específicas en corto tiempo
+        específicas en corto tiempo.
       </p>
     </div>
+
+    <!-- CTA -->
     <div
-      class="row-span-2 border-[#2D1D4E] border-8 rounded-2xl flex justify-center items-center p-5"
+      class="row-span-2 border-8 border-[#2D1D4E] rounded-2xl flex justify-center items-center p-4"
     >
-      <p
-        class="text-black text-4xl cursor-pointer w-full h-full rounded-2xl bg-[#9AC5E9] flex justify-center items-center"
+      <a
+        href="#"
+        class="text-black text-2xl md:text-3xl font-bold text-center w-full h-full rounded-2xl bg-[#9AC5E9] flex justify-center items-center hover:bg-[#78b0e4] transition"
       >
-        Realiza el test aquí >>
+        Realiza el test aquí &gt;&gt;
+      </a>
+    </div>
+
+    <!-- Texto largo -->
+    <div
+      class="lg:col-span-2 border-8 border-[#2D1D4E] p-4 rounded-2xl bg-[#00000075] backdrop-blur-xl"
+    >
+      <p class="text-sm md:text-base">
+        Elegir carrera no es fácil... pero no tienes que hacerlo solo. Contar
+        con el acompañamiento de un profesional en orientación vocacional brinda
+        un enfoque más completo y personalizado al proceso de elección de
+        carrera. Estos expertos están capacitados para interpretar los
+        resultados de los test, identificar bloqueos emocionales o dudas
+        frecuentes, y ofrecer herramientas prácticas para la toma de decisiones.
+        Además, pueden orientar al estudiante sobre el panorama académico y
+        laboral actual, proporcionando información objetiva y actualizada. Esta
+        guía profesional ayuda a fortalecer la confianza y la seguridad en las
+        elecciones, permitiendo que el estudiante construya un proyecto de vida
+        coherente con sus capacidades, intereses y aspiraciones.
       </p>
     </div>
-    <div class="col-span-2 border-[#2D1D4E] border-8 p-5 rounded-2xl">
-      <p
-        class="bg-[#00000075] w-full h-full flex justify-center items-center p-5 rounded-2xl"
-      >
-        Elegir carrera no es fácil... pero no tienes que hacerlo solo Contar con
-        el acompañamiento de un profesional en orientación vocacional brinda un
-        enfoque más completo y personalizado al proceso de elección de carrera.
-        Estos expertos están capacitados para interpretar los resultados de los
-        test, identificar bloqueos emocionales o dudas frecuentes, y ofrecer
-        herramientas prácticas para la toma de decisiones. Además, pueden
-        orientar al estudiante sobre el panorama académico y laboral actual,
-        proporcionando información objetiva y actualizada. Esta guía profesional
-        ayuda a fortalecer la confianza y la seguridad en las elecciones,
-        permitiendo que el estudiante construya un proyecto de vida coherente
-        con sus capacidades, intereses y aspiraciones.
-      </p>
-    </div>
-    <div class="border-[#2D1D4E] border-8 p-5 rounded-2xl">
+
+    <!-- Imagen secundaria -->
+    <div class="border-8 border-[#2D1D4E] rounded-2xl overflow-hidden">
       <img
-        class="w-full h-full object-cover rounded-2xl"
+        class="w-full h-full object-cover"
         src="/img/Test4.webp"
-        alt=""
+        alt="Orientación profesional"
         loading="lazy"
         decoding="async"
       />
     </div>
   </section>
-  <section class="w-full bg-gray-900 py-10">
-    <h2 class="text-3xl font-bold text-center text-white mb-8">Testimonios</h2>
-    <div
-      class="max-w-4xl mx-auto grid gap-6 md:grid-cols-2 lg:grid-cols-3 px-4"
-    >
+
+  <!-- Testimonios -->
+  <section class="w-full bg-gray-900 py-12 px-4">
+    <h2 class="text-3xl font-bold text-center text-white mb-10">Testimonios</h2>
+    <div class="max-w-6xl mx-auto grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
       {
         comentarios.map(({ nombre, fecha, comentario }) => (
-          <div class="bg-white/90 rounded-lg shadow-lg p-6 flex flex-col gap-2">
-            <p class="text-gray-800 text-base mb-2">"{comentario}"</p>
-            <div class="flex justify-between items-center mt-auto">
-              <span class="text-sm font-semibold text-indigo-700">
-                {nombre}
-              </span>
-              <span class="text-xs text-gray-500">{fecha}</span>
+          <div class="bg-white/90 rounded-lg shadow-md p-6 flex flex-col gap-4">
+            <p class="text-gray-800 text-base">"{comentario}"</p>
+            <div class="flex justify-between items-center mt-auto text-sm text-gray-600">
+              <span class="font-semibold text-indigo-700">{nombre}</span>
+              <span>{fecha}</span>
             </div>
           </div>
         ))

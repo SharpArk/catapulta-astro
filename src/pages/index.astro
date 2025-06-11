@@ -10,26 +10,29 @@ export const prerender = true;
   img="img/Heroimg-3.webp"
   active="Home"
 >
-  <section class="w-full h-screen flex justify-center items-center gap-44">
-    <div class="w-[calc(100vw/3)] flex gap-6 flex-col">
+  <section
+    class="w-full min-h-screen flex flex-col lg:flex-row justify-center items-center gap-10 lg:gap-44 p-6"
+  >
+    <div class="w-full lg:w-[calc(100vw/3)] flex flex-col gap-6">
       <h3 class="text-white uppercase font-bold text-3xl">Sobre Nosotros</h3>
-      <p class="text-white text-xl">
-        Nos enfocamos en orientar a los jovenes sobre sus verdaderas vocaciones,
-        para que puedan aprovechar al maximo el tiempo de su juventud y evitar
-        la deserción de dichos jovenes sin importar donde esten escritos.
+      <p class="text-white text-lg">
+        Nos enfocamos en orientar a los jóvenes sobre sus verdaderas vocaciones,
+        para que puedan aprovechar al máximo el tiempo de su juventud y evitar
+        la deserción de dichos jóvenes sin importar dónde estén inscritos.
       </p>
     </div>
     <div>
       <img
-        class="object-cover w-[500px] h-[500px] rounded-[100%]"
+        class="object-cover w-72 h-72 md:w-96 md:h-96 rounded-full"
         src="/img/Sobre Nosotros.webp"
         decoding="async"
         loading="lazy"
       />
     </div>
   </section>
+
   <section
-    class="w-full h-screen bg-cover relative flex justify-center items-center gap-44 blackbg"
+    class="w-full min-h-screen bg-cover relative flex flex-col lg:flex-row justify-center items-center gap-10 lg:gap-44 p-6 blackbg"
   >
     <img
       class="object-cover w-full h-full absolute top-0 left-0 right-to-left"
@@ -38,72 +41,63 @@ export const prerender = true;
       decoding="async"
       loading="lazy"
     />
-    <div class="w-[calc(100vw/3)] flex flex-col gap-4 z-20">
-      <h3 class="text-white font-bold text-4xl uppercase">
+    <div class="w-full lg:w-[calc(100vw/3)] flex flex-col gap-4 z-20">
+      <h3 class="text-white font-bold text-3xl md:text-4xl uppercase">
         Salidas Estudiantiles
       </h3>
       <p
-        class="text-white bg-[#CFC6EC30] p-9 rounded-4xl backdrop-blur-2xl text-xl"
+        class="text-white bg-[#CFC6EC30] p-6 md:p-9 rounded-3xl backdrop-blur-2xl text-lg md:text-xl"
       >
         Hoy en día, los jóvenes cuentan con múltiples oportunidades para
-        formarse en áreas clave del desarrollo tecnológico e industrial. Los
-        estudios tecnológicos ofrecen una alternativa práctica, moderna y de
-        alta demanda laboral para quienes desean adquirir habilidades
-        específicas en corto tiempo
+        formarse en áreas clave del desarrollo tecnológico e industrial...
       </p>
     </div>
     <div
-      class="flex flex-col gap-4 bg-[#CFC6EC30] justify-center items-center p-4 rounded-2xl backdrop-blur-2xl z-20"
+      class="flex flex-col gap-4 bg-[#CFC6EC30] justify-center items-center p-4 rounded-2xl backdrop-blur-2xl z-20 w-full max-w-xl"
     >
-      <p class="w-2xl text-white text-xl">
+      <p class="text-white text-base md:text-xl text-center">
         Explorar nuevas áreas de estudio es abrir la puerta a mundos
-        desconocidos llenos de posibilidades. Cada carrera, cada tecnología,
-        cada ciencia ofrece una forma distinta de transformar el mundo. Las
-        salidas estudiantiles no solo son una oportunidad para conocer nuevas
-        instituciones, sino también para descubrir pasiones, talentos ocultos y
-        caminos que quizás nunca imaginaste recorrer. Atrévete a mirar más allá,
-        a soñar en grande y a construir un futuro con propósito. El conocimiento
-        te lleva lejos, y hoy es el mejor momento para empezar.
+        desconocidos llenos de posibilidades...
       </p>
       <img
-        class="w-[500px] h-[500px] object-cover rounded-[100%]"
+        class="w-72 h-72 md:w-96 md:h-96 object-cover rounded-full"
         src="/img/Estudios2.webp"
         alt=""
         decoding="async"
         loading="lazy"
       />
       <a
-        class="bg-[#F09C08] uppercase font-bold text-3xl p-5 rounded-full cursor-pointer"
-        href="/Salidas Estudiantiles">Más</a
+        class="bg-[#F09C08] uppercase font-bold text-xl md:text-3xl p-4 md:p-5 rounded-full cursor-pointer"
+        href="/Salidas Estudiantiles"
       >
+        Más
+      </a>
     </div>
   </section>
-  <section class="w-full h-screen flex justify-center items-center gap-60">
-    <div class="text-white flex flex-col gap-5 w-[calc((100vw/3)-100px)]">
-      <h3 class="text-4xl uppercase font-bold text-[#E76889]">Test</h3>
-      <p class="text-xl">
+
+  <section
+    class="w-full min-h-screen flex flex-col lg:flex-row justify-center items-center gap-10 lg:gap-60 p-6"
+  >
+    <div
+      class="text-white flex flex-col gap-5 w-full lg:w-[calc((100vw/3)-100px)]"
+    >
+      <h3 class="text-3xl md:text-4xl uppercase font-bold text-[#E76889]">
+        Test
+      </h3>
+      <p class="text-base md:text-xl">
         Elegir una carrera profesional puede ser una decisión difícil para
-        muchos jóvenes. Los test de orientación vocacional son herramientas
-        clave que ayudan a identificar intereses, habilidades y fortalezas
-        personales, facilitando una elección más consciente y acertada.
+        muchos jóvenes...
       </p>
     </div>
     <div
-      class="text-white flex flex-col gap-5 w-fit justify-center items-center rounded-3xl border-b-4 pb-7 pt-7 border-t-4"
+      class="text-white flex flex-col gap-5 w-full max-w-xl justify-center items-center rounded-3xl border-b-4 pb-7 pt-7 border-t-4"
     >
-      <p class="text-xl w-[calc(100vw/3)]">
+      <p class="text-base md:text-xl text-center">
         La orientación vocacional es fundamental para ayudar a los jóvenes a
-        descubrir sus talentos, intereses y fortalezas, permitiéndoles tomar
-        decisiones conscientes sobre su futuro académico y profesional. En una
-        etapa clave de la vida, donde abundan las dudas y presiones externas,
-        contar con una guía adecuada puede marcar la diferencia entre elegir un
-        camino por convicción o por inercia. Además, una buena orientación
-        reduce la deserción escolar, aumenta la motivación y favorece el
-        desarrollo personal, ya que al alinear la vocación con los estudios y el
-        trabajo, se potencia el sentido de propósito y realización en la vida.
+        descubrir sus talentos, intereses y fortalezas...
       </p>
       <img
-        class="w-[650px] h-[500px] rounded-2xl object-cover"
+        class="w-full max-w-[650px] h-auto rounded-2xl object-cover"
         src="/img/Test.webp"
         alt=""
         decoding="async"

@@ -1,13 +1,19 @@
 ---
 import Asesorias from "./Navigate/Asesorias";
-
 const { active } = Astro.props;
-
 export const prerender = true;
 ---
 
+<!-- Alpine.js CDN para manejo de estado -->
+<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer
+></script>
+
 <header class="w-screen h-[100px] bg-[#2D1D4E95] backdrop-blur-2xl fixed z-40">
-  <nav class="w-full h-full flex justify-around items-center">
+  <nav
+    class="w-full h-full flex justify-between items-center px-4"
+    x-data="{ open: false }"
+  >
+    <!-- Logo -->
     <a class="text-xl uppercase font-bold text-white relative" href="/">
       <img class="w-[100px] p-2" src="/astro.svg" alt="" />
       {
@@ -21,51 +27,115 @@ export const prerender = true;
         )
       }
     </a>
-    <a
-      class="text-xl uppercase font-bold text-white relative"
-      href="/Sobre Nosotros"
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex gap-6 items-center">
+      <a
+        class="text-xl uppercase font-bold text-white relative"
+        href="/Sobre Nosotros"
+      >
+        Sobre Nosotros
+        {
+          active == "About" ? (
+            <div
+              transition:name="Active"
+              class="absolute bottom-0 left-0 w-full h-1 bg-white"
+            />
+          ) : (
+            ""
+          )
+        }
+      </a>
+      <a
+        class="text-xl uppercase font-bold text-white relative"
+        href="/Salidas Estudiantiles"
+      >
+        Salidas Estudiantiles
+        {
+          active == "Salidas" ? (
+            <div
+              transition:name="Active"
+              class="absolute bottom-0 left-0 w-full h-1 bg-white"
+            />
+          ) : (
+            ""
+          )
+        }
+      </a>
+      <a class="text-xl uppercase font-bold text-white relative" href="/Test">
+        Test
+        {
+          active == "Test" ? (
+            <div
+              transition:name="Active"
+              class="absolute bottom-0 left-0 w-full h-1 bg-white"
+            />
+          ) : (
+            ""
+          )
+        }
+      </a>
+      <Asesorias client:load />
+    </div>
+    <!-- Hamburger Button -->
+    <button class="md:hidden flex flex-col gap-1 z-50" @click="open = !open">
+      <span class="w-8 h-1 bg-white rounded"></span>
+      <span class="w-8 h-1 bg-white rounded"></span>
+      <span class="w-8 h-1 bg-white rounded"></span>
+    </button>
+    <!-- Mobile Menu -->
+    <div
+      class="fixed top-0 left-0 w-screen h-screen max-h-screen overflow-y-auto bg-[#2D1D4E] bg-opacity-95 flex flex-col items-center justify-center gap-8 text-2xl text-white z-40 transition-all duration-300 md:hidden"
+      x-show="open"
+      x-transition:enter="transition ease-out duration-300"
+      x-transition:enter-start="opacity-0 scale-95"
+      x-transition:enter-end="opacity-100 scale-100"
+      x-transition:leave="transition ease-in duration-200"
+      x-transition:leave-start="opacity-100 scale-100"
+      x-transition:leave-end="opacity-0 scale-95"
+      @click.away="open = false"
+      style="display: none;"
     >
-      Sobre Nosotros
-      {
-        active == "About" ? (
-          <div
-            transition:name="Active"
-            class="absolute bottom-0 left-0 w-full h-1 bg-white"
-          />
-        ) : (
-          ""
-        )
-      }
-    </a>
-    <a
-      class="text-xl uppercase font-bold text-white relative"
-      href="/Salidas Estudiantiles"
-    >
-      Salidas Estudiantiles
-      {
-        active == "Salidas" ? (
-          <div
-            transition:name="Active"
-            class="absolute bottom-0 left-0 w-full h-1 bg-white"
-          />
-        ) : (
-          ""
-        )
-      }
-    </a>
-    <a class="text-xl uppercase font-bold text-white relative" href="/Test">
-      Test
-      {
-        active == "Test" ? (
-          <div
-            transition:name="Active"
-            class="absolute bottom-0 left-0 w-full h-1 bg-white"
-          />
-        ) : (
-          ""
-        )
-      }
-    </a>
-    <Asesorias client:load />
+      <a href="/" @click="open = false" class="relative">
+        Home
+        {
+          active == "Home" ? (
+            <div class="absolute bottom-0 left-0 w-full h-1 bg-white" />
+          ) : (
+            ""
+          )
+        }
+      </a>
+      <a href="/Sobre Nosotros" @click="open = false" class="relative">
+        Sobre Nosotros
+        {
+          active == "About" ? (
+            <div class="absolute bottom-0 left-0 w-full h-1 bg-white" />
+          ) : (
+            ""
+          )
+        }
+      </a>
+      <a href="/Salidas Estudiantiles" @click="open = false" class="relative">
+        Salidas Estudiantiles
+        {
+          active == "Salidas" ? (
+            <div class="absolute bottom-0 left-0 w-full h-1 bg-white" />
+          ) : (
+            ""
+          )
+        }
+      </a>
+      <a href="/Test" @click="open = false" class="relative">
+        Test
+        {
+          active == "Test" ? (
+            <div class="absolute bottom-0 left-0 w-full h-1 bg-white" />
+          ) : (
+            ""
+          )
+        }
+      </a>
+      <Asesorias client:load />
+    </div>
   </nav>
 </header>

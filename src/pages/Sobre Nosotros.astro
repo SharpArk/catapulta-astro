@@ -11,19 +11,21 @@ export const prerender = true;
   titleHero="Sobre Nosotros"
   img="img/SobreNosotros2.webp"
 >
+  <!-- Hero Section -->
   <section
-    class="text-white flex justify-center items-center w-full h-screen gap-60 blackbg] bg-cover relative"
+    class="text-white flex flex-col-reverse lg:flex-row justify-center items-center gap-10 lg:gap-20 px-6 py-16 w-full min-h-screen bg-cover relative blackbg"
   >
-    <div class="flex flex-col justify-center items-center z-20">
+    <div class="z-20 flex justify-center">
       <img
-        class="w-[650px] h-[500px] rounded-2xl object-cover"
+        class="w-72 h-60 md:w-[500px] md:h-[400px] lg:w-[650px] lg:h-[500px] rounded-2xl object-cover"
         src="/img/SobreNosotros3.webp"
         loading="lazy"
         decoding="async"
+        alt="Asesoría Vocacional"
       />
     </div>
     <p
-      class="text-xl w-[calc((100vw/3)-100px)] z-20 p-20 rounded-3xl bg-[#2D1D4E95] backdrop-blur-2xl"
+      class="text-base md:text-xl z-20 bg-[#2D1D4E95] p-6 md:p-10 rounded-3xl backdrop-blur-2xl max-w-xl"
     >
       ¿Aún no sabes qué carrera elegir? No estás solo. Agenda una asesoría
       personalizada y descubre qué camino va mejor contigo. ¡Explora tus
@@ -34,35 +36,38 @@ export const prerender = true;
     <img
       class="absolute w-full h-full top-0 left-0 object-cover gradient-to-right"
       src="/img/SobreNosotros4.webp"
-      alt=""
+      alt="Fondo Difuminado"
       loading="lazy"
       decoding="async"
     />
   </section>
+
+  <!-- Misión y Visión -->
   <section
-    class="flex gap-60 text-white justify-center items-center h-[calc(100vh/2)]"
+    class="flex flex-col lg:flex-row gap-10 lg:gap-20 text-white justify-center items-center px-6 py-16"
   >
     <div
-      class="w-[500px] flex flex-col gap-4 justify-center items-center border-2 border-white rounded-2xl p-5 hover:border-[#E76889]"
+      class="w-full max-w-md flex flex-col gap-4 justify-center items-center border-2 border-white rounded-2xl p-6 hover:border-[#E76889] transition-all"
     >
-      <h3 class="text-3xl uppercase font-bold">Misión</h3>
-      <p class="text-xl">
+      <h3 class="text-2xl md:text-3xl uppercase font-bold">Misión</h3>
+      <p class="text-base md:text-xl text-center">
         Brindar a los jóvenes de colegios públicos la información y orientación
         necesaria sobre los requisitos y oportunidades para acceder a la
         educación superior y formarse en las áreas que realmente les apasionan.
       </p>
     </div>
     <div
-      class="w-[500px] flex flex-col gap-4 justify-center items-center border-2 border-white rounded-2xl p-5 hover:border-[#E76889]"
+      class="w-full max-w-md flex flex-col gap-4 justify-center items-center border-2 border-white rounded-2xl p-6 hover:border-[#E76889] transition-all"
     >
-      <h3 class="text-3xl uppercase font-bold">Visión</h3>
-      <p class="text-xl">
+      <h3 class="text-2xl md:text-3xl uppercase font-bold">Visión</h3>
+      <p class="text-base md:text-xl text-center">
         Ser reconocidos, en el próximo año, como un proyecto referente en
         orientación vocacional para instituciones educativas del sector
         público y privado.
       </p>
     </div>
   </section>
+
   <SliderImages client:load />
 </Layout>
 

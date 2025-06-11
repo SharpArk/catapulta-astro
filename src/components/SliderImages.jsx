@@ -1,4 +1,5 @@
 import { useState } from "react";
+
 function SliderImages() {
   const images = [
     { img: "/img/Fundadores/horizontal/sebas.jpg" },
@@ -34,26 +35,27 @@ function SliderImages() {
   return (
     <section className="w-full h-screen flex justify-center items-center p-5 bg-[#242e47]">
       <div
-        className="w-[calc(100vw/1.2)] h-[calc(100vh-200px)] overflow-hidden relative rounded-2xl"
+        className="relative w-full max-w-[900px] h-[calc(100vh-200px)] sm:h-[calc(100vh-150px)] md:h-[calc(100vh-130px)] rounded-2xl overflow-hidden"
         onMouseEnter={handleHover}
         onMouseLeave={handleNoHover}
       >
-        <div className="flex transition-transform duration-1000 ease-in-out">
+        <div
+          className="flex transition-transform duration-1000 ease-in-out"
+          style={{ transform: `translateX(-${position * 100}%)` }}
+        >
           {images.map((image, index) => (
             <img
               key={index}
               src={image.img}
-              className="w-[calc(100vw/1.2)] h-[calc(100vh-200px)] object-cover shrink-0"
               alt=""
-              style={{
-                transform: `translateX(-${position * 100}%)`,
-                transition: "1s ease",
-              }}
+              className="w-full max-w-full h-[calc(100vh-200px)] sm:h-[calc(100vh-150px)] md:h-[calc(100vh-130px)] object-cover shrink-0"
+              style={{ flexShrink: 0 }}
             />
           ))}
         </div>
+
         <button
-          className={`w-14 h-14 text-4xl text-white rounded-full flex justify-center items-center z-30 absolute left-3 top-1/2 transform -translate-y-1/2  bg-[#242e47] ${
+          className={`absolute left-3 top-1/2 transform -translate-y-1/2 z-30 w-12 h-12 sm:w-14 sm:h-14 text-3xl sm:text-4xl text-white rounded-full flex justify-center items-center bg-[#242e47] ${
             position === 0 ? "opacity-50 cursor-not-allowed" : "cursor-pointer"
           }`}
           onClick={handlePrev}
@@ -63,7 +65,7 @@ function SliderImages() {
           &#60;
         </button>
         <button
-          className={`w-14 h-14 text-4xl text-white rounded-full flex justify-center items-center z-30 absolute right-3 top-1/2 transform -translate-y-1/2  bg-[#242e47] ${
+          className={`absolute right-3 top-1/2 transform -translate-y-1/2 z-30 w-12 h-12 sm:w-14 sm:h-14 text-3xl sm:text-4xl text-white rounded-full flex justify-center items-center bg-[#242e47] ${
             position === images.length - 1
               ? "opacity-50 cursor-not-allowed"
               : "cursor-pointer"
@@ -74,14 +76,11 @@ function SliderImages() {
         >
           &#62;
         </button>
+
         <a
-          className={`absolute uppercase text-3xl bottom-2 font-bold text-white p-5 rounded-2xl bg-[#00000060] z-10 w-fit link backdrop-blur-md`}
           href="/Sobre Nosotros/Fundadores"
-          style={
-            isActive
-              ? { left: "25px", transition: "1s ease" }
-              : { left: "-100%", transition: "1s ease" }
-          }
+          className={`absolute bottom-2 font-bold uppercase text-white p-3 rounded-2xl bg-[#00000060] backdrop-blur-md z-10 text-sm sm:text-lg transition-all duration-1000 ease-in-out`}
+          style={isActive ? { left: "15px" } : { left: "-110%" }}
         >
           Click aquí para ver los Fundadores
         </a>

@@ -29,29 +29,20 @@ export const prerender = true;
   active="Salidas"
 >
   <section
-    class="text-white flex justify-center items-center w-full h-screen gap-60 blackbg bg-cover"
+    class="relative text-white flex flex-col lg:flex-row justify-center items-center w-full min-h-screen gap-10 lg:gap-32 px-6 py-16 blackbg bg-cover"
   >
-    <div class="z-20 text-white">
+    <div class="z-20 text-white max-w-xl">
       <p
-        class="text-xl bg-[#00000075] w-[calc((100vw/3)-100px)] p-5 rounded-3xl backdrop-blur-2xl"
+        class="text-base md:text-xl bg-[#00000075] p-5 rounded-3xl backdrop-blur-2xl"
       >
         Las universidades son instituciones fundamentales para la formación
         académica y profesional, ya que brindan la oportunidad de adquirir
-        conocimientos especializados en diferentes áreas del saber. Cada
-        universidad ofrece una variedad de programas o carreras diseñados para
-        responder a las demandas del mercado laboral, los avances científicos y
-        las necesidades sociales. Estas carreras pueden abarcar desde ciencias
-        de la salud, ingenierías, humanidades, ciencias sociales, artes, hasta
-        tecnologías y muchas otras disciplinas. Elegir la universidad y la
-        carrera adecuada es un paso clave para construir un proyecto de vida
-        sólido y exitoso, por lo que es importante conocer bien las opciones que
-        cada institución ofrece para tomar una decisión informada y alineada con
-        los intereses y habilidades personales.
+        conocimientos especializados en diferentes áreas del saber...
       </p>
     </div>
-    <div class="z-20 text-white">
+    <div class="z-20">
       <img
-        class="w-[500px] h-[500px] object-cover rounded-2xl"
+        class="w-72 h-72 md:w-[400px] md:h-[400px] object-cover rounded-2xl"
         src="/img/Estudios4.webp"
         alt=""
       />
@@ -62,24 +53,29 @@ export const prerender = true;
       alt=""
     />
   </section>
-  <section class="p-52 flex flex-col gap-32">
+
+  <section class="px-6 py-16 flex flex-col gap-24">
     {
-      data.map((e) => (
-        <div class="flex justify-between items-center text-white gap-4">
-          <div class="flex flex-col gap-4">
-            <h1 class="text-2xl font-bold uppercase">{e.Title}</h1>
-            <p class="text-xl w-[calc(100vw/2.5)] p-5 rounded-2xl bg-[#00000075]">
+      data.map((e, i) => (
+        <div
+          class={`flex flex-col-reverse ${
+            i % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
+          } justify-between items-center text-white gap-10 lg:gap-20`}
+        >
+          <div class="flex flex-col gap-4 max-w-xl">
+            <h1 class="text-2xl md:text-3xl font-bold uppercase">{e.Title}</h1>
+            <p class="text-base md:text-xl p-5 rounded-2xl bg-[#00000075]">
               {e.Desc}
             </p>
             <a
-              class="uppercase p-5 bg-[#F09C08] w-fit text-black rounded-full"
+              class="uppercase p-4 md:p-5 bg-[#F09C08] w-fit text-black rounded-full font-semibold"
               href={`/Universidades/${e.Title}`}
             >
               Ver Más
             </a>
           </div>
           <img
-            class="w-[400px] h-[400px] object-cover rounded-3xl"
+            class="w-72 h-72 md:w-[400px] md:h-[400px] object-cover rounded-3xl"
             src={`/img/${e.image}`}
             alt=""
           />
